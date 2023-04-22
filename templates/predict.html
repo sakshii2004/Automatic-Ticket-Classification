@@ -1,0 +1,30 @@
+
+<!doctype html>
+<html>
+    <head>
+        <title>Student Grade Prediction</title>
+    </head>
+    <body>
+        <div class="login">
+            <h1>Predict the Grade of the Student</h1>
+            <h3> Enter the following values to predict: </h3>
+        
+        <form action="{{ url_for('predict')}}"method="post">
+          <label> Select school </label>  
+          <label id='GP'> GP
+            <input id='GP' type="radio" name="school" value=1>
+          </label>
+          <label id='MS'> MS
+          <input id='MS'type="radio" name="school" value=0>
+            </label>
+            
+        
+            <button type="submit" class="btn">Predict</button>
+
+            {{feat}}
+        
+        </form>
+              
+    </div>
+    </body>
+</html>
