@@ -12,7 +12,9 @@ def home():
 @app.route('/predict',methods=['POST'])
 def predict():
     int_features = [int(x) for x in request.form.values()]
-    return render_template('predict.html',feat=int_features)
+    final_features = [np.array(int_features)]
+    prediction = model.predict(final_features)
+    return render_template('predict.html', prediction_text = "THE STUDENT IS LIKELY TO GET A GRADE OF: {}".format(prediction))
 
 if __name__== "__main__":
     app.run(host='0.0.0.0', debug=True)
