@@ -4,4 +4,4 @@ pandas
 sklearn
 numpy
 openpyxl
-pickle
+pickle5
