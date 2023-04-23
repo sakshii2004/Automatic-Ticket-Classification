@@ -1,7 +1,7 @@
 Flask
 gunicorn
 pandas
-sklearn
+scikit-learn
 numpy
 openpyxl
 pickle5
