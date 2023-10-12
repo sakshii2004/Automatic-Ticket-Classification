@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Oasis Help Desk</title> 
+    <link rel="icon" type="image/png" href="https://TicketClassification1.sakshii2004.repl.co/static/icon.png">
+    {% include 'bootstrap.html' %}
+    <link rel="stylesheet" href="static/style.css" type="text/css">
+    <script src="https://kit.fontawesome.com/012c8933fb.js" crossorigin="anonymous"></script>
+  </head>
+  <body>    
+    {% include 'nav.html' %}
+
+    {% include 'sidebar.html' %}
+
+    <div class="main_1 topmargin">
+   
+    
+    <form action="/ticket/submit" method="POST"> 
+       <div class="row">
+         <div class="col-5 left-fields">
+            <label for="tags">Tags</label><br>
+              <select id="tags" name="tags" class="drop_down_box" required>
+                <option value="">Select an option</option>
+                <option value="Service Member">Service Member</option>
+                <option value="Older American">Older American</option>
+              </select> <br><br>
+      
+              <label for="zip_code">ZIP Code</label><br>
+              <input type="number" id="zip_code" name="zip_code" class="input_box" required><br><br>
+      
+              <label for="issue">Issue</label><br>
+              <input type="text" id="issue" name="issue" maxlength="50" class="input_box" required><br><br>
+         </div>
+         <div class="col-5 right-fields">
+              <label for="state">State</label><br>
+              <input type="text" id="state" name="state" maxlength="5" class="input_box" required><br><br>
+      
+              <label for="product">Product</label><br>
+              <select id="products" name="product" class = "drop_down_box" required>
+                  <option value="">Select an option</option>
+                  <option value="Debt collection">Debt collection</option>
+                  <option value="Credit card or prepaid card">Credit card or prepaid card</option>
+                  <option value="Mortgage">Mortgage</option>
+                  <option value="Checking or savings account">Checking or savings account</option>
+                  <option value="Credit reporting, credit repair services, or other personal consumer reports">Credit reporting, credit repair services, or other personal consumer reports</option>
+                  <option value="Vehicle loan or lease">Vehicle loan or lease</option>
+                  <option value="Money transfer, virtual currency, or money service">Money transfer, virtual currency, or money service</option>
+                  <option value="Student loan">Student loan</option>
+                  <option value="Consumer Loan">Consumer Loan</option>
+                  <option value="Credit card">Credit card</option>
+                  <option value="Bank account or service">Bank account or service</option>
+                  <option value="Payday loan, title loan, or personal loan">Payday loan, title loan, or personal loan</option>
+                  <option value="Money transfers">Money transfers</option>
+                  <option value="Credit reporting">Credit reporting</option>
+                  <option value="Payday loan">Payday loan</option>
+                  <option value="Prepaid card">Prepaid card</option>
+                  <option value="Other financial service">Other financial service</option>
+              </select> <br><br>
+      
+              <label for="company">Company</label><br>
+              <select id="company" name="company" class="drop_down_box" required>
+                <option value="">Select an option</option>
+                <option value="JPMORGAN CHASE & CO.">JPMORGAN CHASE & CO.</option>
+              </select> <br><br>
+      
+         </div>
+        </div>
+        <div class="big_complaint">
+        <label for="complaint_what_happened">Complaint Description</label><br>
+        <textarea id="complaint_what_happened" name="complaint_what_happened" rows="4" cols="50" required></textarea><br><br>
+        </div>
+        <input type="submit" value="Submit" class="button-68 submit">
+    </form>
+    </div>
+
+         
+      </div>
+    </div>
+    
+  </body>
+  
+</html>

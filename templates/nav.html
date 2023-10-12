@@ -1,24 +1,142 @@
-<nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#"><div class="display-8">STUDENT GRADE PREDICTOR</div></a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Parameters</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Model</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link disabled">Suggestions</a>
-        </li>
-      </ul>
-    </div>
-  </div>
-</nav>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;1,300&family=Gwendolyn:wght@700&family=Libre+Baskerville:ital@0;1&family=Montserrat:ital,wght@0,100;0,300;0,600;1,100&family=Nunito+Sans:opsz,wght@6..12,300&display=swap');
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  
+}
+
+li, a{
+  font-family: "Libre Baskerville", sans-serif;
+  font-weight: 600;
+  font-size: 18px;  
+  text-decoration: none;
+}
+
+button{
+  font-family: "Libre Baskerville", sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  color: #A10D1A;
+  text-decoration: none;
+  outline: 10px; 
+  border-color: #D3FCC5 ; /* Background color */
+  
+}
+
+header {
+  display: flex;
+  
+  justify-content: flex-end;
+  align-items: center;
+  padding: ; 30px 10%;
+  background-color: #2E2E2E;
+  height: 65px;
+  box-shadow: -2px 7px 5px -3px rgba(115,110,110,0.66);
+  width:100%;
+
+  
+}
+
+.logo {
+  height: 55px;
+  width: auto;  
+  cursor: pointer;
+  margin-right: auto;
+  margin-top: 3px;
+  margin-left: 3px;
+}
+
+.nav_links {
+  list-style:none;
+}
+
+  
+.nav_links li {
+  display: inline-block;
+  padding: 0px 20px;
+  margin-top: 12px;
+}
+
+.nav_links li a {
+  transition: all 0.5s ease 0s;
+}
+.nav_links li a:hover {
+  color: #ffffff;
+  font-weight: 1000;
+  font-size: 21px;
+  
+}
+/*button {
+  padding: 9px 25px;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+  background-color: #FFFFFF;
+  margin-left: 10px;  
+  margin-right: 30px;
+}*/
+
+button:hover{
+  box-shadow: 1px -1px 9px 4px rgba(252,251,229,0.49);
+ 
+}
+
+.search_bar{
+  background-color:#4B4B4B;
+  color: #FCD4DE;
+  width: 80%;
+  border-color: transparent;
+  padding: 10px 15px;
+  margin: 6px 20px 4px;
+  box-sizing: content-box;
+  font-family: 'Nunito Sans', sans-serif;
+  
+}
+
+.search_bar:focus {
+  border: 1px solid #E7F6E9;
+}
+
+.navbar_items{
+  margin-right:750px;
+  margin-left: 15px;
+  color: #B1C5B4;
+}
+
+
+.navbar_item1{
+  color: #b1c5b4;
+}
+.navbar_item1:hover{
+  color: #ffffff;
+  transition: 0.75s;
+  font-size:21px;
+  
+}
+
+.navbar_item2{
+  margin-left: 45px;
+  color: #B1C5B4;
+}
+
+</style>
+<nav>
+<header>
+  <img class="logo" src="https://TicketClassification1.sakshii2004.repl.co/static/logo.png" alt="logo">
+  <!--- <div class = navbar_items nav_links> 
+  <a class="navbar_item1">Home</a>
+  <a class = "navbar_item2">About Us</a>
+  </div>*/ --->
+ 
+  
+  
+  <nav>    
+    <ul class="nav_links">
+      
+      <li><input class="search_bar" type="search" placeholder="search..." ></li>      
+    </ul>      
+  </nav>
+</header>
+

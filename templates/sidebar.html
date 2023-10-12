@@ -1,0 +1,120 @@
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;1,300&family=Gwendolyn:wght@700&family=Libre+Baskerville:ital@0;1&family=Montserrat:ital,wght@0,100;0,300;0,600;1,100&family=Nunito+Sans:opsz,wght@6..12,300&display=swap');
+  .nav {
+    list-block: none;
+    padding: 0;
+    display: block;
+    margin-top: 0px;
+  }
+
+  .nav li {    
+    margin-bottom: 10px;
+  }
+
+  .sidebar{
+    position: fixed;
+    background: #2E2E2E;
+    width: 230px;
+    height: 100%;
+    top: 0;
+    left: 0; 
+    z-index: 1;   
+    margin-top: 65px;
+    box-shadow: 2px 8px 11px -2px rgba(0,0,0,0.74);
+  }
+
+  .sidebar h2{
+   text-align:center; 
+   font-size: 20px; 
+   text-transform: uppercase;   
+   color: #ffffff;
+   background: #A6D3AD;
+   padding: 20px;      
+  }
+
+  .sidebar ul li {
+  margin-top: 18px;
+  margin-bottom: 35px;
+  }
+
+  .sidebar ul li a {
+  color: #ffffff;
+  padding: 0 30px;
+  transition: color 0.4s, margin-left 0.4s;
+  font-family: 'Nunito Sans', sans-serif;
+  font-size:20px;
+  }
+
+  .sidebar ul li a:hover{
+    color: #A6D3AD;
+    margin-left: 20px;
+    transition: 0.4s;
+  } 
+
+  .account{
+    margin-top: 140px;
+    margin-left: 23px; 
+    height: 60px;
+    width: 180px;
+    margin-bottom: 50px;
+  }
+
+  .my_acc{
+    font-family:'Nunito Sans', sans-serif; 
+    font-size: 22px;
+    color: #FFFFFF;
+  }  
+</style>
+
+<div class = "sidebar">
+ 
+  <ul class = "nav">
+    <li class="list_item">
+      <a href = "/tickets">
+        <i class="fa-regular fa-clipboard" style="color: #ffffff;"></i>
+        <span> My Tickets </span>
+      </a>
+    </li>
+
+    <li class="list_item">
+      <a href = "/create_new">
+        <i class="fa-solid fa-plus" style="color: #ffffff;"></i>
+        <span> Create New </span>
+      </a>
+    </li>
+  
+    <li class="list_item">
+      <a href = "#">
+        <i class="fa-regular fa-circle-check" style="color: #ffffff;"></i>
+        <span> Resolved </span>
+      </a>
+    </li>
+
+    <li class="list_item">
+      <a href = "#">
+        <i class="fa-regular fa-message" style="color: #ffffff;"></i>
+        <span> Response </span>
+      </a>
+    </li>
+
+    <li class="list_item">
+      <a href = "#">
+        <i class="fa-solid fa-table-list" style="color: #ffffff;"></i>
+        <span> Services </span>
+      </a>
+    </li>
+
+    <li display="block">
+      <a href = "#">
+        <i class="fa-solid fa-phone" style="color: #ffffff;"></i>
+        <span> Contact Us </span>
+      </a>
+    </li>
+  </ul>
+
+  <button class="account button-68">
+      <a href = "#" class="my_acc">
+        My Account
+      </a>
+    </button>
+</div>
