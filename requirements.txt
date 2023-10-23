@@ -8,3 +8,5 @@ pickle5
 spacy
 nltk
 contractions
+sqlalchemy
+pymysql
