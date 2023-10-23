@@ -12,3 +12,4 @@ contractions
 sqlalchemy
 pymysql
 typing-extensions
+click==8.0.1
