@@ -10,3 +10,4 @@ nltk
 contractions
 sqlalchemy
 pymysql
+typing-extensions==3.7.4.3
