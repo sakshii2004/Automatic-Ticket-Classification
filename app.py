@@ -1,6 +1,7 @@
 import numpy as np
 from flask import Flask, render_template, request
-from database import load_tickets_from_db, add_ticket_to_db
+from database import load_tickets_from_db, load_tickets_from_db_user, add_ticket_to_db, load_tickets_0, load_tickets_1, load_tickets_2, load_tickets_3, load_tickets_4
+from classifier import preprocess, predict
 
 app = Flask(__name__)
 
@@ -17,14 +18,50 @@ def show_form():
 
 @app.route('/tickets')
 def show_tickets():
-  tickets = load_tickets_from_db()
+  tickets = load_tickets_from_db_user()
   return render_template('my_tickets.html', tickets=tickets)
 
 @app.route("/ticket/submit", methods=['POST'])
 def write_submit():
   data = request.form
-  add_ticket_to_db(data)
+  text = preprocess(data['complaint_what_happened'])
+  topic = predict(text)
+  add_ticket_to_db(data, topic)
   return "you ticket has been submitted!"
+
+@app.route("/support")
+def support_page():
+  return render_template('support.html')
+
+@app.route('/all-tickets') #ALL THE TICKETS FOR SUPPORT SIDE
+def show_all_tickets():
+  tickets = load_tickets_from_db()
+  return render_template('all_tickets.html', tickets=tickets)
+
+@app.route('/loans')
+def show_loan_tickets():
+  tickets = load_tickets_0()
+  return render_template('loans.html', tickets=tickets)
+
+@app.route('/account-services')
+def show_account_tickets():
+  tickets = load_tickets_1()
+  return render_template('account_services.html', tickets=tickets)
+
+@app.route('/credit-prepaid')
+def show_credit_tickets():
+  tickets = load_tickets_2()
+  return render_template('credit_prepaid.html', tickets=tickets)
+
+@app.route('/theft-fraud')
+def show_theft_tickets():
+  tickets = load_tickets_3()
+  return render_template('theft_fraud.html', tickets=tickets)
+
+@app.route('/booking-refund')
+def show_booking_tickets():
+  tickets = load_tickets_4()
+  return render_template('booking_refund.html', tickets=tickets)
 
 
 if __name__ == "__main__":

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Oasis Help Desk</title> 
+    <link rel="icon" type="image/png" href="https://TicketClassification1.sakshii2004.repl.co/static/icon.png">
+    {% include 'bootstrap.html' %}
+    <link rel="stylesheet" href="static/style.css" type="text/css">
+    <script src="https://kit.fontawesome.com/012c8933fb.js" crossorigin="anonymous"></script>
+  </head>
+  <body>    
+    {% include 'support_navbar.html' %}
+
+    {% include 'support_sidebar.html' %}
+
+    <div class="main_2">
+
+
+       <div class='row'>
+          <div class='col 1'>
+            <h6 class = 'coltitle'> Complaint Id </h6>
+          </div>
+
+          <div class='col 1'>
+            <h6 class = 'coltitle'> Date </h6>
+          </div>
+
+          <div class='col 3'>
+            <h6 class = 'coltitle'>  Product </h6>
+          </div>
+
+          <div class='col 3'>
+            <h6 class = 'coltitle'> Issue </h6>
+          </div> 
+
+          <div class='col 1'>
+            <h6 class = 'coltitle'> Company </h6>
+          </div>
+
+          <div class='col 1'>
+            <h6 class = 'coltitle'> State </h6>
+          </div>
+
+          <div class='col 1'>
+            <h6 class = 'coltitle'> Zip Code </h6>
+          </div>
+
+          <div class='col 1'>
+            <h6 class = 'coltitle'>  Tags </h6>
+          </div>
+          <br><br>
+          <hr>
+
+        <div>
+
+
+       {% for ticket in tickets %}
+        <div class='box'>
+        <div class='row'>
+          <div class='col 1'>
+            {{ ticket['complaint_id'] }}
+          </div>
+
+          <div class='col 1'>
+            {{ ticket['date'] }} 
+          </div>
+
+          <div class='col 3'>
+            {{ ticket['product'] }} 
+          </div>
+
+          <div class='col 3'>
+            {{ ticket['issue'] }} 
+          </div> 
+
+          <div class='col 1'>
+            {{ ticket['company'] }} 
+          </div>
+
+          <div class='col 1'>
+            {{ ticket['state'] }} 
+          </div>
+
+          <div class='col 1'>
+            {{ ticket['zip_code'] }}
+          </div>
+
+          <div class='col 1'>
+            {{ ticket['tags'] }} 
+          </div>   
+
+        </div>
+
+        </div>
+
+       {% endfor %}
+
+    </div>
+
+  </body>
+
+</html>

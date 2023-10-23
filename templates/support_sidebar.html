@@ -1,0 +1,120 @@
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;1,300&family=Gwendolyn:wght@700&family=Libre+Baskerville:ital@0;1&family=Montserrat:ital,wght@0,100;0,300;0,600;1,100&family=Nunito+Sans:opsz,wght@6..12,300&display=swap');
+  .nav {
+    list-block: none;
+    padding: 0;
+    display: block;
+    margin-top: 0px;
+  }
+
+  .nav li {    
+    margin-bottom: 10px;
+  }
+
+  .sidebar{
+    position: fixed;
+    background: linear-gradient(135deg, #065929, #2E2E2E);
+    width: 300px;
+    height: 100%;
+    top: 0;
+    left: 0; 
+    z-index: 1;   
+    margin-top: 65px;
+    box-shadow: 2px 8px 11px -2px rgba(0,0,0,0.74);
+  }
+
+  .sidebar h2{
+   text-align:center; 
+   font-size: 20px; 
+   text-transform: uppercase;   
+   color: #ffffff;
+   background: #A6D3AD;
+   padding: 20px;      
+  }
+
+  .sidebar ul li {
+  margin-top: 18px;
+  margin-bottom: 35px;
+  }
+
+  .sidebar ul li a {
+  color: #ffffff;
+  padding: 0 30px;
+  transition: color 0.4s, margin-left 0.4s;
+  font-family: 'Nunito Sans', sans-serif;
+  font-size:20px;
+  }
+
+  .sidebar ul li a:hover{
+    color: #A6D3AD;
+    margin-left: 10px;
+    transition: 0.4s;
+  } 
+
+  .account{
+    margin-top: 140px;
+    margin-left: 23px; 
+    height: 60px;
+    width: 180px;
+    margin-bottom: 50px;
+  }
+
+  .my_acc{
+    font-family:'Nunito Sans', sans-serif; 
+    font-size: 22px;
+    color: #FFFFFF;
+  }  
+</style>
+
+<div class = "sidebar">
+
+  <ul class = "nav">
+    <li class="list_item">
+      <a href = "/all-tickets">
+        <i class="fa-solid fa-earth-americas" style="color: #ffffff;"></i>
+        <span> All Tickets </span>
+      </a>
+    </li>
+
+    <li class="list_item">
+      <a href = "/loans">
+        <i class="fa-solid fa-coins" style="color: #ffffff;"></i>
+        <span> Loans & Mortgages </span>
+      </a>
+    </li>
+
+    <li class="list_item">
+      <a href = "/account-services">
+        <i class="fa-solid fa-receipt" style="color: #ffffff;"></i>
+        <span> Account Services </span>
+      </a>
+    </li>
+
+    <li class="list_item">
+      <a href = "/credit-prepaid">
+        <i class="fa-regular fa-credit-card" style="color: #ffffff;"></i>
+        <span> Credit & Prepaid Cards </span>
+      </a>
+    </li>
+
+    <li class="list_item">
+      <a href = "/theft-fraud">
+        <i class="fa-solid fa-sack-dollar" style="color: #ffffff;"></i>
+        <span> Theft & Fraud Reports </span>
+      </a>
+    </li>
+
+    <li display="block">
+      <a href = "/booking-refund">
+        <i class="fa-solid fa-hand-holding-dollar" style="color: #ffffff;"></i>
+        <span> Bookings & Refunds </span>
+      </a>
+    </li>
+  </ul>
+
+  <button class="account button-68" style="width: 250px">
+      <a href = "#" class="my_acc">
+        My Account
+      </a>
+    </button>
+</div>

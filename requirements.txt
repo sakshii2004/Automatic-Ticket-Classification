@@ -5,3 +5,6 @@ scikit-learn
 numpy
 openpyxl
 pickle5
+spacy
+nltk
+contractions
