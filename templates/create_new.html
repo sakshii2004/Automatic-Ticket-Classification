@@ -19,7 +19,7 @@
        <div class="row">
          <div class="col-5 left-fields">
             <label for="tags">Tags</label><br>
-              <select id="tags" name="tags" class="drop_down_box" required>
+              <select id="tags" name="tags" class="drop_down_box">
                 <option value="">Select an option</option>
                 <option value="Service Member">Service Member</option>
                 <option value="Older American">Older American</option>
@@ -65,9 +65,9 @@
       
          </div>
         </div>
-        <div class="big_complaint">
-        <label for="complaint_what_happened">Complaint Description</label><br>
-        <textarea id="complaint_what_happened" name="complaint_what_happened" rows="4" cols="50"  required></textarea><br><br>
+        <div>
+        <label for="complaint_what_happened" class="big_complaint_label">Complaint Description</label><br>
+        <textarea id="complaint_what_happened" class="big_complaint" name="complaint_what_happened" rows="4" cols="50"  required></textarea><br><br>
         </div>
         <input type="submit" value="Submit" class="button-68 submit">
     </form>

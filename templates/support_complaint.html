@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Oasis Help Desk</title> 
+    <link rel="icon" type="image/png" href="https://TicketClassification1.sakshii2004.repl.co/static/icon.png">
+    {% include 'bootstrap.html' %}
+    <link rel="stylesheet" href="static/style.css" type="text/css">
+    <script src="https://kit.fontawesome.com/012c8933fb.js" crossorigin="anonymous"></script>
+  </head>
+  <body>    
+    {% include 'support_navbar.html' %}
+
+    {% include 'support_sidebar.html' %}
+
+    <div class="main_3" style="margin-left:300px; padding:15px;">
+
+      <p>Ticket id: {{ticket['complaint_id']}}</p>
+      <p>Company: {{ticket['company']}}</p>
+      <p>Issue: {{ticket['issue']}}</p>
+      <p>Product: {{ticket['product']}}</p>
+      <p>Date Created: {{ticket['date']}}</p>
+      <p>State: {{ticket['state']}}</p>
+      <p>Tags: {{ticket['tags']}}</p>
+      <p>Zip Code: {{ticket['zip_code']}}</p>
+      <p>Complaint Description: {{ticket['complaint_what_happened']}}</p>
+      <p>Category: {{ticket['Dominant_Topic']}}</p>
+      <p>Resolved: {{ticket['resolved']}}</p>    
+
+
+    </div>
+
+
+      </div>
+    </div>
+
+  </body>
+
+</html>

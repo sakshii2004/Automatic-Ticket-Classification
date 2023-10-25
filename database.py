@@ -14,7 +14,7 @@ engine = create_engine(connection_info,
 def load_tickets_from_db_user():
   with engine.connect() as conn:
     result = conn.execute(
-      text("select * from final_db_tickets ORDER BY `date` DESC LIMIT 6"))
+      text("select * from properly_labeled ORDER BY `date` DESC LIMIT 6"))
     tickets = []
     for row in result.all():
       tickets.append(dict(row._asdict()))
@@ -24,7 +24,7 @@ def load_tickets_from_db_user():
 def load_tickets_from_db():
   with engine.connect() as conn:
     result = conn.execute(
-      text("select * from final_db_tickets ORDER BY `date` DESC"))
+      text("select * from properly_labeled ORDER BY `date` DESC"))
     tickets = []
     for row in result.all():
       tickets.append(dict(row._asdict()))
@@ -34,7 +34,7 @@ def load_tickets_from_db():
 def load_tickets_0():
   with engine.connect() as conn:
     result = conn.execute(
-      text("select * from final_db_tickets where Dominant_Topic=0 ORDER BY `date` DESC"))
+      text("select * from properly_labeled where Dominant_Topic=0 ORDER BY `date` DESC"))
     tickets = []
     for row in result.all():
       tickets.append(dict(row._asdict()))
@@ -43,7 +43,7 @@ def load_tickets_0():
 def load_tickets_1():
   with engine.connect() as conn:
     result = conn.execute(
-      text("select * from final_db_tickets where Dominant_Topic=1 ORDER BY `date` DESC"))
+      text("select * from properly_labeled where Dominant_Topic=1 ORDER BY `date` DESC"))
     tickets = []
     for row in result.all():
       tickets.append(dict(row._asdict()))
@@ -52,7 +52,7 @@ def load_tickets_1():
 def load_tickets_2():
   with engine.connect() as conn:
     result = conn.execute(
-      text("select * from final_db_tickets where Dominant_Topic=2 ORDER BY `date` DESC"))
+      text("select * from properly_labeled where Dominant_Topic=2 ORDER BY `date` DESC"))
     tickets = []
     for row in result.all():
       tickets.append(dict(row._asdict()))
@@ -61,7 +61,7 @@ def load_tickets_2():
 def load_tickets_3():
   with engine.connect() as conn:
     result = conn.execute(
-      text("select * from final_db_tickets where Dominant_Topic=3 ORDER BY `date` DESC"))
+      text("select * from properly_labeled where Dominant_Topic=3 ORDER BY `date` DESC"))
     tickets = []
     for row in result.all():
       tickets.append(dict(row._asdict()))
@@ -70,7 +70,7 @@ def load_tickets_3():
 def load_tickets_4():
   with engine.connect() as conn:
     result = conn.execute(
-      text("select * from final_db_tickets where Dominant_Topic=4 ORDER BY `date` DESC"))
+      text("select * from properly_labeled where Dominant_Topic=4 ORDER BY `date` DESC"))
   tickets = []
   for row in result.all():
     tickets.append(dict(row._asdict()))
@@ -80,7 +80,7 @@ def load_tickets_4():
 def add_ticket_to_db(data, topic):
   with engine.connect() as conn:
     query = text(
-      "INSERT INTO final_db_tickets (zip_code, issue, date, state, product, company, complaint_what_happened, tags, Dominant_Topic) VALUES(:zip_code, :issue, :date, :state, :product, :company, :complaint_what_happened, :tags, :topic)"
+      "INSERT INTO properly_labeled (zip_code, issue, date, state, product, company, complaint_what_happened, tags, Dominant_Topic) VALUES(:zip_code, :issue, :date, :state, :product, :company, :complaint_what_happened, :tags, :topic)"
     )
     variables = {
       "zip_code": data['zip_code'],
@@ -94,3 +94,9 @@ def add_ticket_to_db(data, topic):
       "topic": topic
     }
     conn.execute(query, variables)
+
+def load_one_complaint_from_db(id):
+  with engine.connect() as conn:
+    result = conn.execute(text("select * from properly_labeled where complaint_id = :val"), {"val":id})
+    row=result.fetchall()
+  return dict(row[0]._asdict())

@@ -95,7 +95,12 @@ label{
 }
 
 .big_complaint{
-  
+  width: 1113px;
+  height: 200px;
+}
+
+.big_complaint_label{
+  margin-left:50px;
 }
 
 .box{
@@ -112,4 +117,28 @@ label{
   margin-left: 300px;
   padding: 15px;
 }
+
+.intro_pic{
+  height: 620px;
+  width: auto;
+}
+
+.intro_pic_support{
+  height: 600px;
+  width: auto;
+}
+
+.main_3{
+  margin-left: 300px;
+  padding: 15px;
+}
+
+
+.link{
+  font-family: "Calibri";
+  font-size: 15px;
+  color: #1e8449;
+  text-decoration: underline;  
+}
+
 
